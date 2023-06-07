@@ -47,8 +47,7 @@ import org.gradle.internal.file.Chmod;
  */
 public class EmptyDirTask extends DefaultTask {
 
-    @OutputDirectory
-    public File dir;
+    private File dir;
     private int dirMode = 0755;
 
     /**
@@ -65,7 +64,7 @@ public class EmptyDirTask extends DefaultTask {
         throw new UnsupportedOperationException();
     }
 
-    @Internal
+    @OutputDirectory
     public File getDir() {
         return dir;
     }
