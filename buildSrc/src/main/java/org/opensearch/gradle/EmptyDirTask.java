@@ -48,7 +48,7 @@ import org.gradle.internal.file.Chmod;
 public class EmptyDirTask extends DefaultTask {
 
     @OutputDirectory
-    private File dir;
+    public File dir;
     private int dirMode = 0755;
 
     /**
