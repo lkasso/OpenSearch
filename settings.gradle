@@ -10,7 +10,19 @@
  */
 
 plugins {
-  id "com.gradle.enterprise" version "3.11.1"
+  id 'com.gradle.enterprise' version '3.13.2'
+  id 'com.gradle.common-custom-user-data-gradle-plugin' version '1.10'
+}
+gradleEnterprise {
+  server = 'http://ec2-3-226-245-222.compute-1.amazonaws.com'
+  allowUntrustedServer = true
+  buildScan {
+    publishAlways()
+    capture {
+      taskInputFiles = true
+    }
+    uploadInBackground = true
+  }
 }
 
 buildCache {

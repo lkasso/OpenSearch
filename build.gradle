@@ -458,7 +458,7 @@ gradle.projectsEvaluated {
 
 // test retry configuration
 subprojects {
-  apply plugin: "org.gradle.test-retry"
+  /*apply plugin: "org.gradle.test-retry"
   tasks.withType(Test).configureEach {
     retry {
       if (BuildParams.isCi()) {
@@ -467,7 +467,7 @@ subprojects {
       }
       failOnPassedAfterRetry = false
     }
-  }
+  }*/
 }
 
 // eclipse configuration
